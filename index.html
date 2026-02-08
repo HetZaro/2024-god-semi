@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Год Семьи 2024 — Вологодская область</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header-inner">
+        <a href="#hero" class="logo">
+            <img
+            src="https://godsemyi43.kirovreg.ru/img/logo.png"
+            alt="Год Семьи 2024"
+            onerror="
+                this.src =
+                'https://via.placeholder.com/220x60/ff69b4/ffffff?text=Год+Семьи+2024'"/>
+        </a>
+
+        <nav class="nav">
+            <ul>
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#initiatives">Инициативы</a></li>
+            <li><a href="#events">Мероприятия</a></li>
+            </ul>
+        </nav>
+
+        <div class="contacts">
+            г. Вологда<br />
+            +7 900 000-00-00<br />
+            family@vologda.ru
+        </div>
+        </div>
+    </div>
+    </header>
+
+    <main>
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content container">
+        <div class="hero-text">
+            <h1>Год Семьи 2024</h1>
+            <p>
+            Вологодская область сохраняет и укрепляет традиционные семейные
+            ценности
+            </p>
+            <a href="#initiatives" class="btn btn-primary">Узнать больше</a>
+        </div>
+
+        <div class="slider">
+            <div class="slides">
+            <div class="slide active">
+                <h3>Поддержка многодетных семей</h3>
+                <p>Льготы, выплаты, жильё и автомобили</p>
+            </div>
+            <div class="slide">
+                <h3>Семейные традиции и досуг</h3>
+                <p>Фестивали, мастер-классы, выходные</p>
+            </div>
+            <div class="slide">
+                <h3>Защита материнства и детства</h3>
+                <p>Комплексная помощь мамам и детям</p>
+            </div>
+            <div class="slide">
+                <h3>Клубы молодых семей</h3>
+                <p>Встречи, поддержка, общение</p>
+            </div>
+            </div>
+            <!-- Добавляем точки для слайдера -->
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="initiatives" class="section">
+        <div class="container">
+        <h2>Приоритетные инициативы региона</h2>
+        <div class="cards">
+            <div class="card">
+            <h3>Семейные МФЦ</h3>
+            <p>
+                Услуги рядом с домом: консультации, документы, психологическая
+                помощь.
+            </p>
+            <button class="btn btn-detail" data-modal="modal1">
+                Подробнее
+            </button>
+            </div>
+            <div class="card">
+            <h3>Поддержка многодетных</h3>
+            <p>
+                Финансовая помощь, льготы, автомобили для семей с 8+ детьми.
+            </p>
+            <button class="btn btn-detail" data-modal="modal2">
+                Подробнее
+            </button>
+            </div>
+            <div class="card">
+            <h3>Нацпроект «Семья»</h3>
+            <p>
+                Подготовка к запуску в 2025 году — поддержка семейного
+                благополучия.
+            </p>
+            <button class="btn btn-detail" data-modal="modal3">
+                Подробнее
+            </button>
+            </div>
+            <div class="card">
+            <h3>Конкурс «Это у нас семейное»</h3>
+            <p>Участие поколений, укрепление традиций и связей.</p>
+            <button class="btn btn-detail" data-modal="modal4">
+                Подробнее
+            </button>
+            </div>
+            <div class="card">
+            <h3>Клубы молодых семей</h3>
+            <p>Встречи, психологическая поддержка, совместный досуг.</p>
+            <button class="btn btn-detail" data-modal="modal5">
+                Подробнее
+            </button>
+            </div>
+            <div class="card">
+            <h3>Традиционные ценности</h3>
+            <p>Любовь, верность, уважение, забота о старшем поколении.</p>
+            <button class="btn btn-detail" data-modal="modal6">
+                Подробнее
+            </button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <div class="container">
+        <h2>Ближайшие мероприятия</h2>
+        <div class="cards">
+            <div class="card">
+            <h3>Большие семейные выходные</h3>
+            <p>Май — сентябрь 2024. Марафон во всех районах области.</p>
+            <button class="btn btn-reg" data-modal="reg1">Регистрация</button>
+            </div>
+            <div class="card">
+            <h3>День семьи, любви и верности</h3>
+            <p>8 июля 2024. Праздничные фестивали и выставки.</p>
+            <button class="btn btn-reg" data-modal="reg2">Регистрация</button>
+            </div>
+            <div class="card">
+            <h3>День России — Семейный праздник</h3>
+            <p>12 июня 2024. «Дружная семья — сильная Россия».</p>
+            <button class="btn btn-reg" data-modal="reg3">Регистрация</button>
+            </div>
+            <div class="card">
+            <h3>Торжества в ЗАГС</h3>
+            <p>2024 год. Юбилеи супругов и особые регистрации.</p>
+            <button class="btn btn-reg" data-modal="reg4">Регистрация</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+        <div class="footer-brand">
+            <img
+            src="https://godsemyi43.kirovreg.ru/img/logo.png"
+            alt="Год Семьи"
+            class="footer-logo"
+            />
+            <p>© 2026 Вологодская область</p>
+        </div>
+        <div>
+            <h4>Навигация</h4>
+            <ul>
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#initiatives">Инициативы</a></li>
+            <li><a href="#events">Мероприятия</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Контакты</h4>
+            <p>
+            +7 900 000-00-00<br />family@vologda.ru<br />г. Вологда, ул.
+            Ленина, 1
+            </p>
+        </div>
+        <div>
+            <h4>Социальные сети</h4>
+            <div class="social-links">
+            <a href="https://t.me" target="_blank">Telegram</a>
+            <a href="https://vk.com" target="_blank">ВКонтакте</a>
+            </div>
+        </div>
+        </div>
+    </div>
+    </footer>
+
+    <!-- Исправляем кнопку "Вверх" - убираем href -->
+    <button class="to-top" id="toTopBtn">↑</button>
+
+    <!-- Модальные окна остаются без изменений -->
+    <div class="modal" id="modal1">
+    <div class="modal-content">
+        <button class="close" data-close="modal1">&times;</button>
+        <h2>Семейные МФЦ</h2>
+        <p>
+        Семейные многофункциональные центры предоставляют комплекс услуг в
+        шаговой доступности. Здесь можно получить консультации специалистов,
+        оформить пособия и льготы, записаться на приём к психологу или юристу.
+        Проект направлен на максимальное удобство для семей и активно
+        развивается во всех районах Вологодской области.
+        </p>
+    </div>
+    </div>
+
+    <div class="modal" id="modal2">
+    <div class="modal-content">
+        <button class="close" data-close="modal2">&times;</button>
+        <h2>Поддержка многодетных семей</h2>
+        <p>
+        Меры включают ежемесячные и единовременные выплаты, льготы на ЖКХ,
+        транспорт, предоставление земельных участков и автомобилей семьям с 8
+        и более детьми. В 2024 году на эти цели выделено более 140 млн рублей.
+        Цель — повышение рождаемости и улучшение качества жизни многодетных
+        семей.
+        </p>
+    </div>
+    </div>
+
+    <div class="modal" id="modal3">
+    <div class="modal-content">
+        <button class="close" data-close="modal3">&times;</button>
+        <h2>Национальный проект «Семья»</h2>
+        <p>
+        С 2025 года Вологодская область активно готовится к реализации
+        федерального нацпроекта «Семья». Он включает пять ключевых
+        направлений: финансовая поддержка, жильё, дошкольное образование,
+        психологическая помощь и досуг. Уже в 2024 году формируется
+        региональная программа.
+        </p>
+    </div>
+    </div>
+
+    <div class="modal" id="modal4">
+    <div class="modal-content">
+        <button class="close" data-close="modal4">&times;</button>
+        <h2>Конкурс «Это у нас семейное»</h2>
+        <p>
+        Всероссийский проект, в котором участвуют целые поколения одной семьи.
+        Конкурс направлен на укрепление семейных связей, передачу традиций и
+        ценностей. Вологодские семьи активно участвуют, представляя свои
+        таланты и достижения.
+        </p>
+    </div>
+    </div>
+
+    <div class="modal" id="modal5">
+    <div class="modal-content">
+        <button class="close" data-close="modal5">&times;</button>
+        <h2>Клубы молодых семей</h2>
+        <p>
+        Регулярные встречи для молодых родителей: психологическая поддержка,
+        мастер-классы по воспитанию, совместный досуг и обмен опытом. Клубы
+        помогают справляться с вызовами родительства и укреплять отношения в
+        паре.
+        </p>
+    </div>
+    </div>
+
+    <div class="modal" id="modal6">
+    <div class="modal-content">
+        <button class="close" data-close="modal6">&times;</button>
+        <h2>Сохранение традиционных семейных ценностей</h2>
+        <p>
+        Государственная политика региона направлена на защиту семьи как союза
+        мужчины и женщины, воспитание детей в духе любви, верности, уважения к
+        старшим и преемственности поколений. Проводятся просветительские
+        акции, лекции и семейные фестивали.
+        </p>
+    </div>
+    </div>
+
+    <div class="modal" id="reg1">
+    <div class="modal-content">
+        <button class="close" data-close="reg1">&times;</button>
+        <h2>Регистрация: Большие семейные выходные</h2>
+        <form id="form-reg1" onsubmit="return register(event, 'reg1');">
+        <label>ФИО:<br /><input type="text" name="fio" required /></label>
+        <label
+            >Форма участия:<br />
+            <select name="type" required>
+            <option value="">— выберите —</option>
+            <option value="очно">Очно</option>
+            <option value="онлайн">Онлайн</option>
+            </select>
+        </label>
+        <label>Дата:<br /><input type="date" name="date" required /></label>
+        <div class="form-buttons">
+            <button type="button" class="btn" data-close="reg1">Закрыть</button>
+            <button type="button" class="btn reset">Очистить</button>
+            <button type="submit" class="btn btn-reg">
+            Зарегистрироваться
+            </button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <div class="modal" id="reg2">
+    <div class="modal-content">
+        <button class="close" data-close="reg2">&times;</button>
+        <h2>Регистрация: День семьи, любви и верности</h2>
+        <form id="form-reg2" onsubmit="return register(event, 'reg2');">
+        <label>ФИО:<br /><input type="text" name="fio" required /></label>
+        <label
+            >Форма участия:<br />
+            <select name="type" required>
+            <option value="">— выберите —</option>
+            <option value="очно">Очно</option>
+            <option value="онлайн">Онлайн</option>
+            </select>
+        </label>
+        <label>Дата:<br /><input type="date" name="date" required /></label>
+        <div class="form-buttons">
+            <button type="button" class="btn" data-close="reg2">Закрыть</button>
+            <button type="button" class="btn reset">Очистить</button>
+            <button type="submit" class="btn btn-reg">
+            Зарегистрироваться
+            </button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <div class="modal" id="reg3">
+    <div class="modal-content">
+        <button class="close" data-close="reg3">&times;</button>
+        <h2>Регистрация: День России — Семейный праздник</h2>
+        <form id="form-reg3" onsubmit="return register(event, 'reg3');">
+        <label>ФИО:<br /><input type="text" name="fio" required /></label>
+        <label
+            >Форма участия:<br />
+            <select name="type" required>
+            <option value="">— выберите —</option>
+            <option value="очно">Очно</option>
+            <option value="онлайн">Онлайн</option>
+            </select>
+        </label>
+        <label>Дата:<br /><input type="date" name="date" required /></label>
+        <div class="form-buttons">
+            <button type="button" class="btn" data-close="reg3">Закрыть</button>
+            <button type="button" class="btn reset">Очистить</button>
+            <button type="submit" class="btn btn-reg">
+            Зарегистрироваться
+            </button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <div class="modal" id="reg4">
+    <div class="modal-content">
+        <button class="close" data-close="reg4">&times;</button>
+        <h2>Регистрация: Торжества в ЗАГС</h2>
+        <form id="form-reg4" onsubmit="return register(event, 'reg4');">
+        <label>ФИО:<br /><input type="text" name="fio" required /></label>
+        <label
+            >Форма участия:<br />
+            <select name="type" required>
+            <option value="">— выберите —</option>
+            <option value="очно">Очно</option>
+            <option value="онлайн">Онлайн</option>
+            </select>
+        </label>
+        <label>Дата:<br /><input type="date" name="date" required /></label>
+        <div class="form-buttons">
+            <button type="button" class="btn" data-close="reg4">Закрыть</button>
+            <button type="button" class="btn reset">Очистить</button>
+            <button type="submit" class="btn btn-reg">
+            Зарегистрироваться
+            </button>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

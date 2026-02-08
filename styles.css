@@ -1,0 +1,490 @@
+:root {
+  --primary: #0066cc;
+  --accent: #ff69b4;
+  --dark: #1e293b;
+  --light: #f8f9fa;
+  --gray: #64748b;
+  --glass: rgba(255, 255, 255, 0.75);
+  --border: rgba(255,255,255,0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  z-index: 1000;
+  padding: 16px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo img {
+  height: 56px;
+}
+
+.nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav a {
+  color: var(--dark);
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.contacts {
+  font-size: 0.95rem;
+  color: var(--gray);
+  text-align: right;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://as2.ftcdn.net/jpg/10/00/75/01/1000_F_1000750106_lOk2RG4YUMNr6wGLvAiwTOlfwEv3AawZ.jpg') center/cover no-repeat;
+  filter: brightness(0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.6);
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  opacity: 0.95;
+}
+
+.btn {
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 8px 24px rgba(255,105,180,0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(255,105,180,0.45);
+}
+
+.slider {
+  width: 100%;
+  max-width: 900px;
+  height: 220px;
+  margin: 60px auto 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.slides {
+  display: flex;
+  height: 100%;
+  animation: slide 24s infinite ease-in-out;
+}
+
+.slider:hover .slides {
+  animation-play-state: paused;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.slide h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.slide p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+@keyframes slide {
+  0%, 25% { transform: translateX(0); }
+  25.01%, 50% { transform: translateX(-100%); }
+  50.01%, 75% { transform: translateX(-200%); }
+  75.01%, 100% { transform: translateX(-300%); }
+}
+
+.section {
+  padding: 120px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  color: var(--dark);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card p {
+  flex-grow: 1;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.card .btn {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 100px 0 60px;
+  margin-top: 80px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 48px;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 16px;
+}
+
+.footer h4 {
+  font-size: 1.35rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  line-height: 2.1;
+}
+
+.social-links a {
+  margin-right: 24px;
+  font-size: 1.4rem;
+}
+
+.to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  box-shadow: 0 6px 20px rgba(255,105,180,0.4);
+}
+
+.to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: none;
+  place-items: center;
+  z-index: 2000;
+}
+
+.modal.show {
+  display: grid;
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 540px;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  font-size: 2.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gray);
+}
+
+@media (max-width: 992px) {
+  .hero-text h1 { font-size: 4rem; }
+}
+
+@media (max-width: 768px) {
+  .header-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .nav ul { gap: 28px; flex-wrap: wrap; justify-content: center; }
+  .hero-text h1 { font-size: 3.2rem; }
+  .slider { height: 200px; }
+  .card { min-height: 360px; }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 2.6rem; }
+  .btn { padding: 14px 36px; font-size: 1.05rem; }
+}
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-content label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.modal-content input,
+.modal-content select {
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.modal-content input:focus,
+.modal-content select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255,105,180,0.2);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.form-buttons .btn {
+  padding: 12px 28px;
+  font-size: 1.05rem;
+}
+
+.btn.reset {
+  background: #94a3b8;
+  color: white;
+}
+
+.btn-reg {
+  background: var(--accent);
+  color: white;
+}
+
+
+/* Добавляем в конец файла после существующих стилей */
+
+/* Стили для точек слайдера */
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+
+/* Убираем анимацию slides и добавляем через JS */
+.slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+
+/* Убираем старую анимацию */
+@keyframes slide {
+    0%, 25% { transform: translateX(0); }
+    25.01%, 50% { transform: translateX(-100%); }
+    50.01%, 75% { transform: translateX(-200%); }
+    75.01%, 100% { transform: translateX(-300%); }
+}
+
+/* Медиа-запросы для адаптивности точек */
+@media (max-width: 768px) {
+    .slider-dots {
+        bottom: 15px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-dots {
+        bottom: 10px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+}
