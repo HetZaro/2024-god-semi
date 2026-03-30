@@ -84,7 +84,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('https://as2.ftcdn.net/jpg/10/00/75/01/1000_F_1000750106_lOk2RG4YUMNr6wGLvAiwTOlfwEv3AawZ.jpg') center/cover no-repeat;
+  background: url('./images/enhance-picRefiner-873fdf-770-[problembo.com].jpg') center/cover no-repeat;
   filter: brightness(0.65);
 }
 
