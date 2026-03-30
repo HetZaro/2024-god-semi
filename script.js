@@ -1,4 +1,3 @@
-// Слайдер
 let currentSlide = 0;
 let slideInterval;
 
@@ -6,19 +5,15 @@ function initSlider() {
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
     
-    // Показываем текущий слайд
     function showSlide(n) {
-        // Скрываем все слайды
         slides.forEach(slide => {
             slide.classList.remove('active');
         });
         
-        // Убираем активный класс у всех точек
         dots.forEach(dot => {
             dot.classList.remove('active');
         });
         
-        // Корректируем индекс
         if (n >= slides.length) {
             currentSlide = 0;
         } else if (n < 0) {
@@ -27,23 +22,19 @@ function initSlider() {
             currentSlide = n;
         }
         
-        // Показываем нужный слайд
         slides[currentSlide].classList.add('active');
         
-        // Активируем соответствующую точку
         if (dots[currentSlide]) {
             dots[currentSlide].classList.add('active');
         }
     }
     
-    // Автопрокрутка
     function startAutoSlide() {
         slideInterval = setInterval(() => {
             showSlide(currentSlide + 1);
         }, 4000); // Меняем каждые 4 секунды
     }
     
-    // Останавливаем автопрокрутку при наведении
     const slider = document.querySelector('.slider');
     if (slider) {
         slider.addEventListener('mouseenter', () => {
@@ -55,7 +46,6 @@ function initSlider() {
         });
     }
     
-    // Обработчики для точек
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             clearInterval(slideInterval);
@@ -64,19 +54,17 @@ function initSlider() {
         });
     });
     
-    // Начинаем автопрокрутку
     showSlide(0);
     startAutoSlide();
 }
 
-// Модальные окна (оставляем вашу логику, но добавляем небольшие улучшения)
 document.querySelectorAll('[data-modal]').forEach(btn => {
     btn.addEventListener('click', () => {
         const modalId = btn.dataset.modal;
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.add('show');
-            document.body.style.overflow = 'hidden'; // Блокируем скролл
+            document.body.style.overflow = 'hidden';
         }
     });
 });
@@ -87,7 +75,7 @@ document.querySelectorAll('[data-close]').forEach(el => {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.remove('show');
-            document.body.style.overflow = 'auto'; // Восстанавливаем скролл
+            document.body.style.overflow = 'auto';
         }
     });
 });
@@ -101,7 +89,6 @@ document.querySelectorAll('.modal').forEach(modal => {
     });
 });
 
-// Кнопка "Наверх"
 window.addEventListener('scroll', () => {
     const toTopBtn = document.querySelector('.to-top');
     if (toTopBtn) {
@@ -109,7 +96,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Исправляем кнопку "Вверх" - убираем href и добавляем обработчик
 document.querySelector('.to-top').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
@@ -117,7 +103,6 @@ document.querySelector('.to-top').addEventListener('click', () => {
     });
 });
 
-// Плавная прокрутка (ваш код, оставляем как есть)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -130,7 +115,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Кнопки сброса формы (ваш код, оставляем как есть)
 document.querySelectorAll('.reset').forEach(btn => {
     btn.addEventListener('click', () => {
         const form = btn.closest('form');
@@ -140,15 +124,12 @@ document.querySelectorAll('.reset').forEach(btn => {
     });
 });
 
-// Функция регистрации с улучшенной валидацией
 function register(e, modalId) {
     e.preventDefault();
     
     const form = e.target;
     
-    // Проверяем валидность
     if (!form.checkValidity()) {
-        // Подсвечиваем невалидные поля
         const inputs = form.querySelectorAll('input, select');
         inputs.forEach(input => {
             if (!input.checkValidity()) {
@@ -166,7 +147,6 @@ function register(e, modalId) {
         return false;
     }
     
-    // Собираем данные формы
     const formData = new FormData(form);
     const data = {
         fio: formData.get('fio'),
@@ -178,7 +158,6 @@ function register(e, modalId) {
                'Торжества в ЗАГС'
     };
     
-    // Сохраняем в localStorage (имитация отправки)
     let registrations = JSON.parse(localStorage.getItem('familyRegistrations') || '[]');
     registrations.push({
         ...data,
@@ -186,17 +165,13 @@ function register(e, modalId) {
     });
     localStorage.setItem('familyRegistrations', JSON.stringify(registrations));
     
-    // Показываем сообщение
     alert(`Регистрация на "${data.event}" успешно отправлена! Спасибо!`);
     
-    // Закрываем модальное окно
     document.getElementById(modalId).classList.remove('show');
     document.body.style.overflow = 'auto';
     
-    // Сбрасываем форму
     form.reset();
     
-    // Убираем красные рамки
     form.querySelectorAll('input, select').forEach(input => {
         input.style.borderColor = '';
     });
@@ -204,11 +179,8 @@ function register(e, modalId) {
     return false;
 }
 
-// Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
     initSlider();
-    
-    // Добавляем валидацию в реальном времени
     document.querySelectorAll('form input, form select').forEach(input => {
         input.addEventListener('blur', function() {
             if (!this.checkValidity()) {
